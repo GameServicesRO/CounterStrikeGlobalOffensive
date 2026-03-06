@@ -1,6 +1,16 @@
 #include <sourcemod>
 #include <geoip>
 
+/*
+GameServices Chanelog:
+
+------- Version 2.2 -------  
+- Fixed database insert error for column last_seen. Added default value
+- Now database disconnect when the map changes
+- Added column platform_user_id
+
+*/
+
 #pragma semicolon 1
 #pragma newdecls required
 
