@@ -1,6 +1,3 @@
-#include <sourcemod>
-#include <geoip>
-
 /*
 GameServices Chanelog:
 
@@ -10,6 +7,9 @@ GameServices Chanelog:
 - Added column platform_user_id
 
 */
+
+#include <sourcemod>
+#include <geoip>
 
 #pragma semicolon 1
 #pragma newdecls required
