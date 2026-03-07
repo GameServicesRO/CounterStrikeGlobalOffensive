@@ -90,6 +90,22 @@ public void OnClientAuthorized(int client)
     }
 }
 
+public void OnClientDisconnect(int client)
+{
+    if (!IsFakeClient(client) && g_dbDatabase != null)
+    {
+        char name[MAX_NAME_LENGTH], steamid[32], address[16], country[3];
+        GetClientName(client, name, sizeof(name));
+        GetClientAuthId(client, AuthId_Steam2, steamid, sizeof(steamid));
+        GetClientIP(client, address, sizeof(address));
+        GeoipCode2(address, country);
+        QuerySql(name, steamid, address, country, 0, 1);
+    } else if(!IsFakeClient(client) && g_dbDatabase == null)
+    {
+        LogError("Database connection it's null");
+    }
+}
+
 public void QuerySql(char[] name, char[] steamid, char[] address, char[] country, int seconds, int option)
 {
     char query[256];
