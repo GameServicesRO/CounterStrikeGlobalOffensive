@@ -38,7 +38,7 @@ public void OnPluginStart()
     AutoExecConfig(true, "playerinfo");
 }
 
-public void OnPLuginEnd()
+public void OnPluginEnd()
 {
     if(g_dbDatabase != null)
     {
@@ -106,7 +106,7 @@ public void OnClientDisconnect(int client)
     }
 }
 
-public void QuerySql(char[] name, char[] steamid, char[] address, char[] country, int seconds, int option)
+void QuerySql(char[] name, char[] steamid, char[] address, char[] country, int seconds, int option)
 {
     char query[256];
     if (option)
