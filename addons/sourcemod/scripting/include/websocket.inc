@@ -8,7 +8,7 @@
 #define REQUIRE_EXTENSIONS
 #include <websocket/http>
 #include <websocket/ws_client>
-#include <websocket/ws_server>
+// #include <websocket/ws_server>
 
 public Extension __ext_websocket = {
   name = "websocket",
